@@ -1,19 +1,16 @@
 var staticCacheName = "fx-rates-v1";
 
 self.addEventListener('install', function(event) {
-	event.waitUntil(
-		caches.open(staticCacheName).then(function(cache) {
-			return cache.addAll([
-				'/skeleton',
-				'js/currency_list.js',
-				'jquery/jquery-3.2.1.min.js',
-				'jquery-migrate-1.4.1.min.js',
-				'jqm/jquery.mobile-1.5.0-alpha.1.min.css',
-				'jqm/jquery.mobile-1.5.0.alpha.1.min.js',
-				'css/main.css'
-			]);
-		})
-	);
+	event.waitUntil(caches.open(staticCacheName).then(function(cache) {
+		return cache.addAll([
+			'js/currency_list.js',
+			'jquery/jquery-3.2.1.min.js',
+			'jquery-migrate-1.4.1.min.js',
+			'jqm/jquery.mobile-1.5.0-alpha.1.min.css',
+			'jqm/jquery.mobile-1.5.0.alpha.1.min.js',
+			'css/main.css'
+		]);
+	}));
 });
 
 self.addEventListener('activate', function(event) {
@@ -31,14 +28,6 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-	var requestUrl = new URL(event.request.url);
-	if (requestUrl.origin === location.origin) {
-		if (requestUrl.pathname === '/') {
-			event.respondWith(caches.match('/skeleton'));
-			return;
-		}
-	}
-
 	event.respondWith(caches.match(event.request).then(function(response) {
 		return response || fetch(event.request);
 	}));

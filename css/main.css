@@ -1,0 +1,58 @@
+/* ===================================== FONTS =============================*/
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two);
+
+/* ===================================== FOOTER ============================*/
+.header-text {
+	text-align: center;
+	font-family: 'Lobster Two', sans-serif;
+	font-size: 40px;
+}
+
+/* ===================================== FOOTER ============================*/
+.footer-text {
+	text-align: center;
+	font-family: 'Lobster Two', sans-serif;
+}
+
+.footer-text a {
+	text-decoration: none;
+}
+
+/*====================================== CURRENCY SET FORM ================*/
+.form-text {
+	text-align: center;
+	font-family: 'Lobster Two', sans-serif;
+	text-decoration: underline;
+}
+
+.currency-name {
+	text-align: center;
+	font-family: 'Lobster Two', sans-serif;
+}
+
+/*====================================== RATES TABLE ======================*/
+#rates-table {
+	/* do something to make the table abit better than it is right now but what?!? */
+}
+
+#rates-table thead {
+	border-bottom: 1px solid black;
+}
+
+#rates-table th {
+	text-align: center;
+	font-family: 'Lobster Two', sans-serif;
+	font-size: 20px;
+}
+
+#rates-table-cur td {
+	text-align: center;
+}
+
+#rates-column {
+	text-align: left !important;
+}
+
+#rates-table-button {
+	display: none;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Forex Rates</title>
+	<link rel="stylesheet" href="jqm/jquery.mobile-1.5.0-alpha.1.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="toolbar" data-type="header">
+			<p class="header-text">Forex Rates</p>
+		</div>
+		<div role="main" class="ui-content">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<form id="from-cur-form">
+						<input data-type="search" id="from-cur" placeholder="Change Base Currency">
+					</form>
+				</div>
+			</div>
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<h2 class="currency-name">Rates for <span id="cur">USD</span>:</h2>
+				</div>
+			</div>
+			<div class="ui-grid-solo">
+				<div class="ui-block-a">
+					<table data-mode="columntoggle" data-role="table" id="rates-table">
+						<thead>
+							<tr>
+								<th data-priority="persist">Currency</th>
+								<th>Rate</th>
+							</tr>
+						</thead>
+						<tbody id="currency-body">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div data-role="toolbar" data-type="footer" data-position="fixed">
+			<p class="footer-text">Created by <a href="http://www.mrahmat.com" target="_blank">mrahmat</a> using <a href="http://fixer.io">fixer API</a></p>
+		</div>
+	</div>
+	<script src="jquery/jquery-3.2.1.min.js"></script>
+	<script src="jquery/jquery-migrate-1.4.1.min.js"></script>
+	<script src="jqm/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+	<script src="js/currency_list.js"></script>
+</body>
+</html>

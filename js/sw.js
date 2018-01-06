@@ -10,6 +10,9 @@ self.addEventListener('install', function(event) {
 			'jqm/jquery.mobile-1.5.0.alpha.1.min.js',
 			'css/main.css'
 		]);
+	}).catch(function(err) {
+		console.log(`install: 
+						${err}`);
 	}));
 });
 
@@ -31,6 +34,7 @@ self.addEventListener('fetch', function(event) {
 	event.respondWith(caches.match(event.request).then(function(response) {
 		return response || fetch(event.request);
 	}).catch(function(err) {
-		console.log(err);
+		console.log(`install: 
+						${err}`);
 	}));
 });

@@ -10,7 +10,7 @@ self.addEventListener('install', function(event) {
 			'../jqm/images/ajax-loader.gif',
 			'../jquery/jquery-3.2.1.min.js',
 			'../jquery/jquery-migrate-1.4.1.min.js',
-			'https://fonts.googleapis.com/css?family=Lobster+Two
+			'https://fonts.googleapis.com/css?family=Lobster+Two'
 		]);
 	}).catch(function(err) {
 		console.log(`install: ${err}`);

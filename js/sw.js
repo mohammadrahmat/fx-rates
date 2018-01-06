@@ -4,7 +4,9 @@ self.addEventListener('install', function(event) {
 	event.waitUntil(caches.open(staticCacheName).then(function(cache) {
 		return cache.addAll([
 			'../css/main.css',
-			'../js/currency_list.js'
+			'../js/currency_list.js',
+			'../jqm/*.js',
+			'../jqm/*.css'
 		]);
 	}).catch(function(err) {
 		console.log(`install: ${err}`);

@@ -3,10 +3,8 @@ var staticCacheName = "fx-rates-v1";
 self.addEventListener('install', function(event) {
 	event.waitUntil(caches.open(staticCacheName).then(function(cache) {
 		return cache.addAll([
-			'../css/*',
-			'../js/*',
-			'../jquery/*',
-			'../jqm/*'
+			'../css/main.css',
+			'../js/currency_list.js'
 		]);
 	}).catch(function(err) {
 		console.log(`install: ${err}`);

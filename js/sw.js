@@ -19,6 +19,11 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
+	var requestUrl = new URL(event.request.url);
+	if (requestUrl.origin === location.origin) {
+		event.respondWith(caches.match('../index.html'));
+		return;
+	}
 	event.respondWith(caches.match(event.request).then(function(response) {
 		return response || fetch(event.request);
 	}).catch(function(err) {

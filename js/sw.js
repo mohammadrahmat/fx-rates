@@ -16,7 +16,7 @@ const thingsToCache = [
 
 self.addEventListener('install', event => {
 	self.skipWaiting();
-	event.waitUntil(caches.open(staticCacheName).then(cache => cache.addAll(thingsToCache));
+	event.waitUntil(caches.open(staticCacheName).then(cache => cache.addAll(thingsToCache)));
 });
 	
 self.addEventListener('activate', event => {

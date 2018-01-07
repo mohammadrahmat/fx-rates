@@ -19,15 +19,15 @@ self.addEventListener('install', event => {
 	event.waitUntil(caches.open(staticCacheName).then(cache => cache.addAll(thingsToCache)));
 });
 	
-// self.addEventListener('activate', event => {
-// 	event.waitUntil(
-// 		caches.keys().then(keys => Promise.all(
-// 			keys.map(key => {
-// 				if(!expectedCaches.includes(key)) return caches.delete(key);
-// 			})
-// 		))
-// 	);
-// });
+self.addEventListener('activate', event => {
+	event.waitUntil(
+		caches.keys().then(keys => Promise.all(
+			keys.map(key => {
+				if(!expectedCaches.includes(key)) return caches.delete(key);
+			})
+		))
+	);
+});
 
 self.addEventListener('fetch', event => {
 	const requestUrl = new URL(event.request.url);

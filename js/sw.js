@@ -35,5 +35,5 @@ self.addEventListener('fetch', event => {
 		event.respondWith(caches.match('index.html'));
 		return;
 	}
-	event.respondWith(caches.match(event.request).then(r => r || fetch(event.request));
+	event.respondWith(caches.match(event.request).then(r => r || fetch(event.request)));
 });

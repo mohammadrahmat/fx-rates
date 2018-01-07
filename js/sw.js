@@ -31,7 +31,7 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
 	const requestUrl = new URL(event.request.url);
-	if (requestUrl.origin === location.origin && requestUrl.pathname === '\') {
+	if (requestUrl.origin === location.origin && requestUrl.pathname === '\\') {
 		event.respondWith(caches.match('index.html'));
 		return;
 	}

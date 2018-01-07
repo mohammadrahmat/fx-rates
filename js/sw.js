@@ -1,4 +1,4 @@
-const staticCacheName = "fx-rates-v1";
+const staticCacheName = "fx-rates-v2";
 const pageSkeleton = "index.html";
 const expectedCaches = [
 	staticCacheName

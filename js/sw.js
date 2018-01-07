@@ -1,4 +1,5 @@
 const staticCacheName = "fx-rates-v1";
+const pageSkeleton = "index.html";
 const expectedCaches = [
 	staticCacheName
 ];
@@ -31,9 +32,10 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
 	const requestUrl = new URL(event.request.url);
-	if (requestUrl.origin === location.origin && requestUrl.pathname === '\\') {
-		console.log('im here');
-		event.respondWith(caches.match('index.html'));
+	console.log('im here 2');
+	if (requestUrl.origin === location.origin && requestUrl.pathname === pageSkeleton) {
+		console.log('im here 2');
+		event.respondWith(caches.match(pageSkeleton));
 		return;
 	}
 	event.respondWith(caches.match(event.request).then(r => r || fetch(event.request)));

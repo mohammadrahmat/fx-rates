@@ -25,7 +25,7 @@ function loadRates() {
 function registerServiceWorker() {
 	if(!navigator.serviceWorker) return;
 
-	navigator.serviceWorker.register('js/sw.js');
+	navigator.serviceWorker.register('js/sw.js', {scope: '/'}));
 }
 
 $(document).ready(function () {

@@ -2,7 +2,7 @@
 require("isomorphic-fetch")
 
 let $ = require("jquery");
-let base = 'TRY';
+let base = 'USD';
 let url = 'https://api.fixer.io/latest?base=';
 
 function changeBase(newBase) {

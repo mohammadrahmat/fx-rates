@@ -4,14 +4,14 @@ const expectedCaches = [
 	staticCacheName
 ];
 const thingsToCache = [
-	'../index.html',
-	'../css/main.css',
-	'../js/currency_list.js',
-	'../jqm/jquery.mobile-1.5.0-alpha.1.min.js',
-	'../jqm/jquery.mobile-1.5.0-alpha.1.min.css',
-	'../jqm/images/ajax-loader.gif',
-	'../jquery/jquery-3.2.1.min.js',
-	'../jquery/jquery-migrate-1.4.1.min.js',
+	'index.html',
+	'css/main.css',
+	'js/currency_list.js',
+	'jqm/jquery.mobile-1.5.0-alpha.1.min.js',
+	'jqm/jquery.mobile-1.5.0-alpha.1.min.css',
+	'jqm/images/ajax-loader.gif',
+	'jquery/jquery-3.2.1.min.js',
+	'jquery/jquery-migrate-1.4.1.min.js',
 	'https://fonts.googleapis.com/css?family=Lobster+Two'
 ];
 
